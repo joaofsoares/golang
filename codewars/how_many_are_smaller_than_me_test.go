@@ -1,22 +1,9 @@
 package codewars
 
 import (
+	"learn/helper"
 	"testing"
 )
-
-func areEquals(arr1 []int, arr2 []int) bool {
-	if len(arr1) != len(arr2) {
-		return false
-	}
-
-	for i, v := range arr1 {
-		if v != arr2[i] {
-			return false
-		}
-	}
-
-	return true
-}
 
 func TestSmallerThanMe1(t *testing.T) {
 
@@ -26,7 +13,7 @@ func TestSmallerThanMe1(t *testing.T) {
 
 	result := Smaller(input)
 
-	if !areEquals(expected, result) {
+	if !helper.AreEquals(expected, result) {
 		t.Fatalf("expected = %v is not equals result = %v", expected, result)
 	}
 }
@@ -39,7 +26,7 @@ func TestSmallerThanMe2(t *testing.T) {
 
 	result := Smaller(input)
 
-	if !areEquals(expected, result) {
+	if !helper.AreEquals(expected, result) {
 		t.Fatalf("expected = %v is not equals result = %v", expected, result)
 	}
 }
