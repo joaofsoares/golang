@@ -25,5 +25,7 @@ func TestGameMaster(t *testing.T) {
 	newGm := &GameMaster{name: "foo", game: "WorldOfDarkness"}
 
 	assert.Equal(t, "foo", newGm.name)
+	assert.Equal(t, "foo", newGm.GetName())
 	assert.Equal(t, "WorldOfDarkness", newGm.game)
+	assert.Equal(t, "WorldOfDarkness", newGm.GetGame())
 }
