@@ -1,10 +1,8 @@
 package codewars
 
 import (
-	"fmt"
-	"testing"
-
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestRot13One(t *testing.T) {
@@ -72,9 +70,6 @@ func TestRot13Seven(t *testing.T) {
 	input := 'n'    // 110
 	expected := 'z' // 122
 
-	fmt.Println("n = ", input)
-	fmt.Println("z = ", expected)
-
 	res := input + 12
 
 	assert.Equal(t, expected, res)
@@ -94,9 +89,6 @@ func TestRot13Nine(t *testing.T) {
 
 	input := 'N'    // 78
 	expected := 'Z' // 90
-
-	fmt.Println("N = ", input)
-	fmt.Println("Z = ", expected)
 
 	res := input + 12
 
