@@ -10,7 +10,6 @@ func summaryRanges(nums []int) []string {
 	for cnt < len(nums) {
 		start, end := nums[cnt], 0
 
-		start = nums[cnt]
 		for cnt+1 < len(nums) && nums[cnt+1] == nums[cnt]+1 {
 			cnt += 1
 		}

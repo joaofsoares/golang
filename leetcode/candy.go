@@ -1,5 +1,7 @@
 package leetcode
 
+import "learn/helper"
+
 func candy(ratings []int) int {
 
 	if len(ratings) == 0 {
@@ -27,19 +29,9 @@ func candy(ratings []int) int {
 			tmpCandy = res[cnt+1] + 1
 		}
 
-		numCandies += max(tmpCandy, res[cnt])
+		numCandies += helper.Max(tmpCandy, res[cnt])
 		res[cnt] = tmpCandy
 	}
 
 	return numCandies
-}
-
-func max(a int, b int) int {
-
-	if a > b {
-		return a
-	}
-
-	return b
-
 }
