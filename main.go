@@ -27,7 +27,7 @@ func main() {
 	res := <-channels.SendWord("Await word")
 	fmt.Println(res)
 
-	// Mutex
+	// mutex
 	counter := 0
 	go mutex.LoopCounter(&counter, 10)
 
