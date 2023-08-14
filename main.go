@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"learn/book/cpt1"
+	"learn/book/cpt2"
+	"learn/book/cpt3"
 	"learn/channels"
 	"learn/mutex"
 	"learn/routines"
@@ -44,5 +46,15 @@ func main() {
 	// fetch url
 	cpt1.Fetch("http://gopl.io")
 	cpt1.FetchAll([]string{"http://gopl.io", "http://godoc.org", "http://golang.org"})
+
+	// convert celsius to fahrenheit
+	fahrenheit := cpt2.CToF(35)
+	fmt.Printf("Fahrenheit: %.2fF\n", fahrenheit)
+
+	celsius := cpt2.FToC(75)
+	fmt.Printf("Celsius: %.2fC\n", celsius)
+
+	// const weekday
+	fmt.Println("Today is Monday:", cpt3.Monday)
 
 }
