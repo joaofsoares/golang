@@ -10,7 +10,7 @@ func SendWord(word string) <-chan string {
 
 	go func() {
 		defer close(res)
-		time.Sleep(3 * time.Second)
+		time.Sleep(2 * time.Second)
 		res <- word
 	}()
 
