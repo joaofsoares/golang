@@ -9,6 +9,7 @@ import (
 	"learn/mutex"
 	"learn/routines"
 	"os"
+	"sync"
 	"time"
 )
 
@@ -34,6 +35,36 @@ func main() {
 	// mutex
 	counter := 0
 	go mutex.LoopCounter(&counter, 10)
+
+	sc := mutex.SafeCounter{
+		Counts: make(map[string]int),
+		Mux:    &sync.Mutex{},
+	}
+
+	emails := []mutex.EmailTest{
+		{
+			Email: "foo@bar.com",
+			Count: 42,
+		},
+		{
+			Email: "contact@bar.com",
+			Count: 51,
+		},
+		{
+			Email: "foo@bar.com",
+			Count: 10,
+		},
+		{
+			Email: "me@bar.com",
+			Count: 21,
+		},
+		{
+			Email: "contact@bar.com",
+			Count: 10,
+		},
+	}
+
+	mutex.ExecuteEmailTest(sc, emails)
 
 	// introduction
 	cpt1.HelloWorld()
