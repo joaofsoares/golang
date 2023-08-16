@@ -14,19 +14,19 @@ type SafeCounter struct {
 	Mux    *sync.Mutex
 }
 
-func (sc SafeCounter) inc(key string) {
+func (sc *SafeCounter) inc(key string) {
 	sc.Mux.Lock()
 	defer sc.Mux.Unlock()
 	sc.slowIncrement(key)
 }
 
-func (sc SafeCounter) val(key string) int {
+func (sc *SafeCounter) val(key string) int {
 	sc.Mux.Lock()
 	defer sc.Mux.Unlock()
 	return sc.Counts[key]
 }
 
-func (sc SafeCounter) slowIncrement(key string) {
+func (sc *SafeCounter) slowIncrement(key string) {
 	tmpCounter := sc.Counts[key]
 
 	time.Sleep(time.Millisecond)
@@ -41,7 +41,7 @@ type EmailTest struct {
 	Count int
 }
 
-func ExecuteEmailTest(sc SafeCounter, emails []EmailTest) {
+func ExecuteEmailTest(sc *SafeCounter, emails []EmailTest) {
 	emailsMap := make(map[string]struct{})
 
 	var wg sync.WaitGroup

@@ -64,7 +64,7 @@ func main() {
 		},
 	}
 
-	mutex.ExecuteEmailTest(sc, emails)
+	mutex.ExecuteEmailTest(&sc, emails)
 
 	// introduction
 	cpt1.HelloWorld()
