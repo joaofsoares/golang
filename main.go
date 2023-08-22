@@ -69,6 +69,7 @@ func main() {
 	// introduction
 	cpt1.HelloWorld()
 	cpt1.EchoParams(os.Args[1:])
+
 	// cpt1.RunDups()
 	cpt1.ReadFiles([]string{"./book/files/text.txt"})
 	cpt1.ReadFilesOnly([]string{"./book/files/text.txt"})
