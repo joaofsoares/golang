@@ -2,7 +2,7 @@ package leetcode
 
 import "fmt"
 
-func addStrings(num1 string, num2 string) string {
+func AddStrings(num1 string, num2 string) string {
 	s1 := len(num1) - 1
 	s2 := len(num2) - 1
 
