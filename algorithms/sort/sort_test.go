@@ -20,6 +20,10 @@ func TestInsertionSort(t *testing.T) {
 			input:    []int{5, 9, 2, 1, 7, 4},
 			expected: []int{1, 2, 4, 5, 7, 9},
 		},
+		3: {
+			input:    []int{9, 9, 8, 8, 5, 5, 3, 3, 2, 2, 1},
+			expected: []int{1, 2, 2, 3, 3, 5, 5, 8, 8, 9, 9},
+		},
 	}
 
 	for _, elem := range tests {
