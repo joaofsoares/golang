@@ -19,7 +19,7 @@ func TestSumArray(t *testing.T) {
 	}
 
 	for _, elem := range tests {
-		assert.Equal(t, sum.SumArray(&elem.input, len(elem.input)), elem.expected, "sum array should be equals expected")
+		assert.Equal(t, sum.SumArray(&elem.input, len(elem.input)), elem.expected, "sum array should be equals expected (sum of all array elements)")
 	}
 
 }
