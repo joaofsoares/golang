@@ -1,6 +1,6 @@
 package exercism
 
-type testCase struct {
+type raindropsTestCase struct {
 	description string
 
 	input int
@@ -8,9 +8,9 @@ type testCase struct {
 	expected string
 }
 
-var testCases = []testCase{
-
+var raindropsTestCases = []raindropsTestCase{
 	{
+
 		description: "the sound for 1 is 1",
 
 		input: 1,
