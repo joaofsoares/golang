@@ -1,6 +1,6 @@
 package exercism
 
-const OvenTime = 40
+const OvenTime int = 40
 
 func RemainingOvenTime(actualMinutesInOven int) int {
 	return OvenTime - actualMinutesInOven
