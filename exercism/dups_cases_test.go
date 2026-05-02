@@ -1,4 +1,4 @@
-package dups
+package exercism
 
 type dupsTestCase struct {
 	description string
